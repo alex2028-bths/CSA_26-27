@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Problem1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter your name: ");
-        String name = input.nextLine();
+        String name = scan.nextLine();
         System.out.println("Welcome " + name + "!");
         Scanner input2 = new Scanner(System.in);
         System.out.println("Please enter the first integer: ");
