@@ -16,7 +16,7 @@ public class Problem2 {
         } else if (number < number2) {
             System.out.print(name2 + "'s number is bigger!");
         } else {
-            System.out.print("The numbers are equal!");
+            System.out.print("The numbers are equal");
 
         }
     }
