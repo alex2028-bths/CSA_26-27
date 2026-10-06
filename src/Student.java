@@ -24,6 +24,4 @@ public class Student {
     int getGradYear() {
         return gradYear;
     }
-
-    String setFirstName(String newName) {
-    }
+}
