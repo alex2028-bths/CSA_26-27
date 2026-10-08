@@ -4,6 +4,7 @@ public class Student {
     private int gradYear;
     private double accumulatedTestScores;
     private int testScoreCount;
+    private double highestTestScore;
 
     public Student (String firstName, String lastName, int gradYear ) {
         this.firstName = firstName;
@@ -11,6 +12,7 @@ public class Student {
         this.gradYear = gradYear;
         testScoreCount = 0;
         accumulatedTestScores = 0.0;
+        highestTestScore = 0;
     }
 
     String getFirstName() {
@@ -43,6 +45,9 @@ public class Student {
     double addTestScore (double testScore) {
         accumulatedTestScores += testScore;
         testScoreCount++;
+        if (highestTestScore < testScore) {
+            highestTestScore = testScore;
+        }
         return accumulatedTestScores;
     }
 
@@ -62,6 +67,7 @@ public class Student {
         System.out.println("Graduation Year: " + getGradYear());
         System.out.println("Number of Test Scores: " + testScoreCount);
         System.out.println("Average Test Scores: " + averageTestScore());
+        System.out.println("Highest Test Score: " + highestTestScore);
         System.out.println("Is passing: " + isPassing());
     }
 }
