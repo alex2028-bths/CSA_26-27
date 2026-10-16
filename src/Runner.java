@@ -1,6 +1,6 @@
 import java.util.Scanner;
  public static void main(String[] args) {
-       Scanner scan = new Scanner(System.in);
+     /*  Scanner scan = new Scanner(System.in);
         System.out.print("Enter string 1: ");
         String str1 = scan.nextLine();
         System.out.print("Enter String 2: ");
@@ -16,4 +16,7 @@ import java.util.Scanner;
                 System.out.println(str1+" comes before "+str2+" alphabetically");
             }
         }
-    }
+    } */
+     String yum = "What’s for dinner?";
+     String din = yum.substring(3, 12).substring(5, 7);
+     System.out.println(din); }
