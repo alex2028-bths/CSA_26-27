@@ -70,4 +70,8 @@ public class Student {
         System.out.println("Highest Test Score: " + highestTestScore);
         System.out.println("Is passing: " + isPassing());
     }
+
+    public String getStudentInfo() {
+        return "Student Full Name: "+getFirstName()+" "+getLastName()+"\n"+"Graduation Year: "+getGradYear()+"\n"+"Number of Test Scores: "+testScoreCount+"\n"+"Average Test Scores: "+averageTestScore()+"\n"+"Is passing: "+isPassing();
+    }
 }
