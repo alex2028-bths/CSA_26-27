@@ -19,4 +19,5 @@ import java.util.Scanner;
     } */
      String yum = "What’s for dinner?";
      String din = yum.substring(3, 12).substring(5, 7);
-     System.out.println(din); }
+     System.out.println(din.length());
+ }
