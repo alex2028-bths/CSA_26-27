@@ -8,6 +8,6 @@ public static void main(String[] args) {
     System.out.println(str);
     str = methods.funnyString("apples", 1);
     System.out.println(str);
-    str = methods.halvesReversed("see you soon");
+    str = methods.halvesReversed("weekend!");
     System.out.println(str);
 }
