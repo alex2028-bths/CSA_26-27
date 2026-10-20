@@ -1,23 +1,28 @@
-import java.util.Scanner;
- public static void main(String[] args) {
-     /*  Scanner scan = new Scanner(System.in);
-        System.out.print("Enter string 1: ");
-        String str1 = scan.nextLine();
-        System.out.print("Enter String 2: ");
-        String str2 = scan.nextLine();
-        if (str1.equals(str2)) {
-            System.out.println("The strings are equal!");
-        }
-        else {
-            System.out.println("The strings are NOT equal");
-            if (str1.compareTo(str2) > 0) {
-                System.out.println(str2+" comes before "+str1+" alphabetically");
-            } else {
-                System.out.println(str1+" comes before "+str2+" alphabetically");
-            }
-        }
-    } */
-     String yum = "What’s for dinner?";
-     String din = yum.substring(3, 12).substring(5, 7);
-     System.out.println(din.length());
- }
+public class Runner {
+    public static void main(String[] args){
+
+        String str1 = "Hello how are you today?";
+        System.out.println(str1.length());
+        System.out.println(str1.indexOf("H"));
+        System.out.println(str1.indexOf("h"));
+        System.out.println(str1.indexOf("l"));
+        System.out.println(str1.indexOf("o"));
+        System.out.println(str1.indexOf("?"));
+        System.out.println(str1.indexOf("ll"));
+        System.out.println(str1.indexOf("ello"));
+        System.out.println(str1.indexOf("lo ho"));
+        System.out.println(str1.indexOf("a"));
+        System.out.println(str1.indexOf("W"));
+        System.out.println(str1.indexOf(" "));
+        System.out.println(str1.indexOf("howare"));
+        System.out.println(str1.indexOf("Are"));
+        System.out.println(str1.indexOf("Hello how are you today?"));
+
+        int x = str1.indexOf("e") + str1.indexOf("E");
+        System.out.println(x);
+
+        String str2 = "how";
+        System.out.println(str1.indexOf(str2));
+        System.out.println(str2.indexOf(str1));
+    }
+}
