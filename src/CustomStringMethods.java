@@ -30,9 +30,16 @@ public class CustomStringMethods {
     }
 
     public String insertAt(String orig, String insertText, String searchStr) {
-        if (orig.indexOf(searchStr) > 0) {
+        if (orig.indexOf(searchStr) >= 0) {
             return orig.substring(0, orig.indexOf(searchStr)) + insertText + orig.substring(orig.indexOf(searchStr), orig.length());
         }
         return orig+insertText;
+    }
+    public String yellOrWhisper(String myString) {
+       String str = myString.substring(0,1);
+       if (str.equals(str.toUpperCase())) {
+           return myString.toUpperCase();
+       }
+        return myString.toLowerCase();
     }
 }

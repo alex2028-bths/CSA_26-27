@@ -1,29 +1,19 @@
 public static void main(String[] args) {
     CustomStringMethods methods = new CustomStringMethods();
-    String str = methods.insertAt("ghost", "BOO!", "o");
+    String str = methods.yellOrWhisper("Hello James!");
     System.out.println(str);
-    str = methods.insertAt("ghost", "BOO!", "st");
+    str = methods.yellOrWhisper("hello James!");
     System.out.println(str);
-    str = methods.insertAt("ghost", "BOO!", "m");
+    str = methods.yellOrWhisper("aBCDEFGHIJK");
     System.out.println(str);
-    str = methods.insertAt("spooooky!", "YIKES", "o");
+    str = methods.yellOrWhisper("Abcdefghijk");
     System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th", "y");
+    str = methods.yellOrWhisper("B");
     System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th", "birthday");
+    str = methods.yellOrWhisper("b");
     System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th", " ");
+    str = methods.yellOrWhisper("IT'S SUNNY!");
     System.out.println(str);
-    str = methods.insertAt("happy birthday!", " 18th", " ");
-    System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th ", "bir");
-    System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th", "!");
-    System.out.println(str);
-    str = methods.insertAt("happy birthday!", "18th", "z");
-    System.out.println(str);
-    str = methods.insertAt("a", "m", "a");
-    System.out.println(str);
-    str = methods.insertAt("a", "m", "p");
+    str = methods.yellOrWhisper("it's rainy");
     System.out.println(str);
 }
