@@ -1,19 +1,13 @@
 public static void main(String[] args) {
     CustomStringMethods methods = new CustomStringMethods();
-    String str = methods.yellOrWhisper("Hello James!");
+    String str = methods.funnyString("computer", 3);
     System.out.println(str);
-    str = methods.yellOrWhisper("hello James!");
+    str = methods.funnyString("computer", 0);
     System.out.println(str);
-    str = methods.yellOrWhisper("aBCDEFGHIJK");
+    str = methods.funnyString("computer", 7);
     System.out.println(str);
-    str = methods.yellOrWhisper("Abcdefghijk");
+    str = methods.funnyString("apples", 1);
     System.out.println(str);
-    str = methods.yellOrWhisper("B");
-    System.out.println(str);
-    str = methods.yellOrWhisper("b");
-    System.out.println(str);
-    str = methods.yellOrWhisper("IT'S SUNNY!");
-    System.out.println(str);
-    str = methods.yellOrWhisper("it's rainy");
+    str = methods.halvesReversed("weekend!");
     System.out.println(str);
 }
