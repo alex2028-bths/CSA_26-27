@@ -3,6 +3,6 @@ public class Runner {
         WhileLoopFun fun = new WhileLoopFun();
         fun.printDigits(213);
         System.out.println(fun.countLetter("excellente", "q"));
-        System.out.print(fun.maxDoubles(2,63));
+        System.out.print(fun.maxDoubles(8,10));
     }
 }

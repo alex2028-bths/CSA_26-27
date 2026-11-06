@@ -17,27 +17,6 @@ public class WhileLoopFun {
         return count;
     }
 
-    /**Returns the maximum number of times that number can be doubled before it exceeds threshold
-     Example:  If number is 4 and threshold is 20, return 2, since 4 can be doubled a maximum of two
-     times, 4 → 8 → 16, without exceeding the threshold value of 20.
-
-     Example:  If number is 2 and threshold is 65, return 5, since 2 can be doubled a maximum of five
-     times, 2 → 4 → 8 → 16 → 32 → 64, without exceeding the threshold value of 65.
-
-     Example:  If number is 2 and threshold is 64, return 5, since 2 can be doubled a maximum of five
-     times, 2 → 4 → 8 → 16 → 32 → 64, without exceeding the threshold value of 64.
-
-     Example:  If number is 2 and threshold is 63, return 4, since 2 can be doubled a maximum of four
-     times, 2 → 4 → 8 → 16 → 32, without exceeding the threshold value of 63.
-
-     Example:  If number is 5 and threshold is 500, return 6, since 5 can be doubled a maximum of six
-     times, 5 → 10 → 20 → 40 → 80 → 160 → 320, without exceeding the threshold value of 500.
-
-     Example:  If number is 8 and threshold is 10, return 0, since 8 cannot be doubled without
-     exceeding threshold.
-
-     Precondition: number > 0, threshold > 0
-     */
     public int maxDoubles(int number, int threshold) {
         int count = 0;
         while(number <= threshold) {
