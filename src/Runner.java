@@ -1,16 +1,8 @@
-import java.util.Scanner;
-
 public class Runner {
-    public static void main(String[] args){ {
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("What number do you want to count up to? ");
-                int countTo = scanner.nextInt();
-
-                int counter = 0;
-                while (counter < countTo) {
-                    counter++;
-                    System.out.println(counter);
-                }
-            }
-        }
+    public static void main(String[] args){
+        WhileLoopFun fun = new WhileLoopFun();
+        fun.printDigits(213);
+        System.out.println(fun.countLetter("excellente", "q"));
+        System.out.print(fun.maxDoubles(2,63));
     }
+}

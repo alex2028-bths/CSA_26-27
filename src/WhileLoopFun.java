@@ -1,28 +1,20 @@
 public class WhileLoopFun {
-
-    /**This class has no instance variables, so we can either include no constructor,
-     or this simple no-parameter constructor, which is actually preferred practice
-     over omitting the constructor entirely
-     */
     public WhileLoopFun() { }
 
-    /**Prints the individual digits in number separately, starting with the rightmost digit first, on separate lines.
-     Example:  If number is 361, this methods prints 1, then 6, then 3 (on separate lines)
-     Example:  If number is 150856, this methods prints 6, then 5, then 8, then 0, then 5, then 1 (on separate
-     lines)
-     */
     public void printDigits(int number) {
+        while(number > 0) {
+            System.out.println(number%10);
+            number /= 10;
+        }
     }
 
-    /** Returns the number of times letter occurs in word.
-     Example:  If word is "apple" and letter is "p",  this methods returns 2
-     Example:  If word is "excellente" and letter is "e",  this methods returns 4
-
-     PRECONDITION: letter has length 1
-     Note!  This could arguably be done easier with a for loop, so if you already know how to use for loops,
-     try it this time using a while loop.
-     */
     public int countLetter(String word, String letter) {
+        int count = 0;
+        while(word.indexOf(letter) > -1) {
+            count++;
+            word = word.substring(word.indexOf(letter)+1);
+        }
+        return count;
     }
 
     /**Returns the maximum number of times that number can be doubled before it exceeds threshold
@@ -47,6 +39,12 @@ public class WhileLoopFun {
      Precondition: number > 0, threshold > 0
      */
     public int maxDoubles(int number, int threshold) {
+        int count = 0;
+        while(number <= threshold) {
+            number *= 2;
+            count++;
+        }
+        return count - 1;
     }
 
     /**Returns true if number is prime (i.e. it has exactly two divisors: 1 and itself) and false
@@ -62,5 +60,6 @@ public class WhileLoopFun {
      but 1 has only a single divisor! (don’t believe it? Google it!)
      */
     public boolean isPrime(int number) {
+        return false;
     }
 }
