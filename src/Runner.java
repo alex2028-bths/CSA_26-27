@@ -1,12 +1,16 @@
-public class Runner {
-    public static void main(String[] args){
-        int p = 5;
-        int q = 0;
+import java.util.Scanner;
 
-        if (p > 0 && (p / q) == 2) {
-            System.out.println("beep");
-        } else {
-            System.out.println("boop");
+public class Runner {
+    public static void main(String[] args){ {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("What number do you want to count up to? ");
+                int countTo = scanner.nextInt();
+
+                int counter = 0;
+                while (counter < countTo) {
+                    counter++;
+                    System.out.println(counter);
+                }
+            }
         }
     }
-}
