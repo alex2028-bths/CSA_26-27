@@ -39,6 +39,16 @@ public class WhileLoopFun {
      but 1 has only a single divisor! (don’t believe it? Google it!)
      */
     public boolean isPrime(int number) {
-        return false;
+       int count = 2;
+       if(number == 1 || number == 2) {
+           return false;
+       }
+        while(count < number) {
+            if(number % count == 0) {
+                return false;
+            }
+            count++;
+        }
+        return true;
     }
 }
