@@ -1,21 +1,29 @@
-import java.util.Scanner;
-
 public class Runner {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What number do you want to factorial? ");
-        System.out.print("Enter a number between 0 and 170: ");
-        int userNumber = scanner.nextInt();
-        int num = userNumber;
-        while(userNumber < 0 || userNumber > 170) {
-            System.out.print("No! Between 0 and 170: ");
-            userNumber = scanner.nextInt();
+    for(int i = 1; i <= 10; i++ ) {
+        System.out.print(i + " ");
         }
-        double factorial = 1;
-        while(userNumber > 1) {
-            factorial *= userNumber;
-            userNumber--;
+    System.out.println(" ");
+    for(int i = 1; i < 11; i++) {
+        System.out.print(i + " ");
+    }
+    System.out.println(" ");
+    for(int i = 15; i >= 0; i-- ) {
+            System.out.print(i + " ");
         }
-        System.out.println(num + "! is " + factorial);
+    System.out.println(" ");
+    for(int i = 15; i > -1; i-- ) {
+            System.out.print(i + " ");
+        }
+    System.out.println(" ");
+    for(int i = 0; i <= 20; i++ ) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    System.out.println(" ");
+    for(int i = 0; i <= 20; i += 2) {
+            System.out.print(i + " ");
+        }
     }
 }
