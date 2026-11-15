@@ -1,6 +1,12 @@
 public class Runner {
     public static void main(String[] args) {
-        String str = "Apples";
-    System.out.print(countCharacters(str, "p"));
+        CoinFlip coin = new CoinFlip();
+        for(int i = 1; i <= 50; i++) {
+            System.out.println("flip " + i + ": " + coin.flip());
+        }
+        System.out.println();
+        for(int i = 100; i <= 1000; i += 100) {
+            System.out.println("simulation with " + i + " coin flips: percent heads = " + coin.simulate(i));
+        }
     }
 }
