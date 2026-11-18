@@ -21,28 +21,6 @@ public class StringLoops {
         return reverseString;
     }
 
-    /* Returns a String with all instances of "searchChar" in "origString" replaced with
-   "replaceChar"; matches should be case-sensitive (i.e. no need to worry about
-    lowercase vs. uppercase)
-
-   - if searchChar = "a", origString = "canned beans and bananas", replaceChar = "*"
-     this method returns "c*nned be*ns *nd b*n*n*s" (A not a match because of case)
-   - if searchChar = "t", origString = "Ratatattat", replaceChar = "p"
-     this method returns "Rapapappap"
-   - if searchChar = "!", origString = "Nice! Day today!", replaceChar = "?"
-     this method returns "Nice? Day today?"
-   - if searchChar = "i", origString = "it’s the brain drain pain train",
-     replaceChar = "I", this method returns "It’s the braIn draIn paIn traIn"
-   - if searchChar = "i", origString = "it’s the brain drain pain train",
-     replaceChar = " ", this method returns " t’s the bra n dra n pa n tra n"
-   - if searchChar = "A", origString = "ABABABABABC", replaceChar = "D"
-     this method returns "DBDBDBDBDBC"
-   - if searchChar = "a", origString = "ABABABABABC", replaceChar = "D"
-     this method returns "ABABABABABC" (no matches because of case)
-
-
-    PRECONDITION: searchChar and replaceChar are single characters and are not equal
-  */
     public String replaceCharacterV1(String searchChar, String origStr, String replaceChar) {
         String newString = "";
         for(int i = 0; i < origStr.length(); i++) {
@@ -54,6 +32,48 @@ public class StringLoops {
             }
         }
         return newString;
+    }
+
+    public String replaceCharacterV2(String searchChar, String origStr, String replaceChar){
+        int index = 0;
+        while((origStr.indexOf(searchChar) != -1)) {
+            index = origStr.indexOf(searchChar);
+            origStr = origStr.substring(0, index) + replaceChar + origStr.substring(index + 1);
+        }
+        return origStr;
+    }
+
+    /* Returns the number of times "searchString" appears in "origString";
+   matches should be case-sensitive (i.e. no need to worry about lower vs. uppercase)
+
+   Examples:
+   - if searchString = "an" and origString = "canned beans and bananas",
+     this method returns 5: canned beans and bananas
+   - if searchString = "tat" and origString = "Ratatattat",
+     this method returns 3: Ratatattat (note the overlap!)
+   - if searchString = "lower" and origString = "sunflower",
+     this method returns 1: sunflower
+   - if searchString = "haha" and origString = "Hahahahaha",
+     this method returns 3: Hahahahaha (note the overlap!)
+   - if searchString = "rain" and origString = "rain drain pain train",
+     this method returns 3: rain drain pain train
+   - if searchString = "was" and origString = "I was about to call you",
+     this method returns 1: I was about to call you
+   - if searchString = "but" and origString = "I was about to call you",
+     this method returns 0: I was about to call you
+   - searchString = "i", origString = "iiiit's supercalifragilisticexpialidociousi",
+     this method returns 12: iiiit's supercalifragilisticexpialidociousi
+  */
+    public int countString(String searchString, String origString) {
+        int count = 0;
+        String template = "";
+        for(int i = 0; i < origString.length() - searchString.length(); i++) {
+            template = origString.substring(i, i + searchString.length());
+            if(template.equals(searchString)) {
+                count++;
+            }
+        }
+        return count;
     }
 
 }
