@@ -67,7 +67,7 @@ public class StringLoops {
     public int countString(String searchString, String origString) {
         int count = 0;
         String template = "";
-        for(int i = 0; i < origString.length() - searchString.length(); i++) {
+        for(int i = 0; i <= origString.length() - searchString.length(); i++) {
             template = origString.substring(i, i + searchString.length());
             if(template.equals(searchString)) {
                 count++;
