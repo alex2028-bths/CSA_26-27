@@ -43,27 +43,6 @@ public class StringLoops {
         return origStr;
     }
 
-    /* Returns the number of times "searchString" appears in "origString";
-   matches should be case-sensitive (i.e. no need to worry about lower vs. uppercase)
-
-   Examples:
-   - if searchString = "an" and origString = "canned beans and bananas",
-     this method returns 5: canned beans and bananas
-   - if searchString = "tat" and origString = "Ratatattat",
-     this method returns 3: Ratatattat (note the overlap!)
-   - if searchString = "lower" and origString = "sunflower",
-     this method returns 1: sunflower
-   - if searchString = "haha" and origString = "Hahahahaha",
-     this method returns 3: Hahahahaha (note the overlap!)
-   - if searchString = "rain" and origString = "rain drain pain train",
-     this method returns 3: rain drain pain train
-   - if searchString = "was" and origString = "I was about to call you",
-     this method returns 1: I was about to call you
-   - if searchString = "but" and origString = "I was about to call you",
-     this method returns 0: I was about to call you
-   - searchString = "i", origString = "iiiit's supercalifragilisticexpialidociousi",
-     this method returns 12: iiiit's supercalifragilisticexpialidociousi
-  */
     public int countString(String searchString, String origString) {
         int count = 0;
         String template = "";
@@ -76,5 +55,58 @@ public class StringLoops {
         return count;
     }
 
+    public String removeString(String searchString, String origString) {
+       while (origString.indexOf(searchString) != -1) {
+           int index = origString.indexOf(searchString);
+           origString = origString.substring(0,index) + origString.substring(index + searchString.length());
+       }
+        return origString;
+    }
+
+    /* Returns true if myString is a palindrome, i.e. the characters read the same
+   forwards and backwards, and false otherwise. Don't worry about case.
+   NOTE!  Spaces should be disregarded when determining if it's a palindrome.
+   "no lemon no melon" is a palindrome!
+
+    Examples:
+    - myString = "A", return true
+    - myString = "mom", return true
+    - myString = "dad", return true
+    - myString = "bob", return true
+    - myString = "noon", return true
+    - myString = "deed", return true
+    - myString = "12321", return true
+    - myString = "aaaaaaa", return true
+    - myString = "baaabaaab", return true
+    - myString = "civic", return true
+    - myString = "kayak", return true
+    - myString = "racecar", return true
+    - myString = "my gym", return true
+    - myString = "step on no pets", return true
+    - myString = "45TTGTT54", return true
+    - myString = "no lemon no melon", return true
+    - myString = "a nut for a jar of tuna", return true
+    - myString = "! 1 2 3 4 M 6M4321!", return true
+    - myString = "was it a car or a cat i saw", return true
+    - myString = "a man a plan a canal panama", return true
+    - myString = "mod", return false
+    - myString = "dang", return false
+    - myString = "boo", return false
+    - myString = "noonish", return false
+    - myString = "indeed", return false
+    - myString = "1234432", return false
+    - myString = "civics", return false
+    - myString = "kayaks", return false
+    - myString = "racing car", return false
+    - myString = "my gyms", return false
+    - myString = "step on pets", return false
+    - myString = "1 3 2 4 3 2 1", return false
+    - myString = "AAADAA", return false
+    - myString = "BaaBaaaB", return false
+   */
+    public boolean isPalindrome(String myString) {
+        myString = removeString(" ", myString);
+        return (myString.equals(reverseString(myString)));
+    }
 }
 
