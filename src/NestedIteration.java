@@ -1,10 +1,16 @@
 public class NestedIteration {
     public static void main(String[] args) {
-        for(int i = 0; i < 6; i++) {
-            for(int j = 0; j < i + 1; j++) {
-                System.out.print(" ");
+        int result = 0;
+        int k = 0;
+        while (k < 4) {
+            int m = 0;
+            while (m < 3) {  // nested while loop
+                result++;
+                m++;
+                System.out.println("k " + k + ", m " + m);
             }
-            System.out.println("*");
+            k++;
         }
+        System.out.println("result: " + result);
     }
 }
